@@ -1,24 +1,23 @@
-import 'dart:io';
-
-import 'package:flutter/services.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/widgets.dart';
 
 import '_service.dart';
 
-Future<void> runService(Service service) {
+Future<void> runService() async {
   WidgetsFlutterBinding.ensureInitialized();
-  return Future.wait([Service._setCertificates(), service._initialize()]);
+  late Service service;
+  if (kDebugMode) {
+    service = const DevelopmentService();
+  } else {
+    service = const ProductionService();
+  }
+  return service._initialize();
 }
 
 abstract class Service {
   const Service();
 
   Future<void> _initialize();
-
-  static Future<void> _setCertificates() async {
-    final data = await rootBundle.load('assets/files/lets-encrypt-r3.pem');
-    SecurityContext.defaultContext.setTrustedCertificatesBytes(data.buffer.asUint8List());
-  }
 }
 
 class DevelopmentService extends Service {

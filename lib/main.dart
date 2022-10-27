@@ -1,16 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:go_router/go_router.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 import 'screen/_screen.dart';
 
 void main() async {
-  if (kDebugMode) {
-    await runService(const DevelopmentService());
-  } else {
-    await runService(const ProductionService());
-  }
+  await runAssets();
+  await runService();
   runApp(const MyApp());
 }
 
