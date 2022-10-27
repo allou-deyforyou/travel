@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "372618709453",
+    "project_id": "travel-16732",
+    "storage_bucket": "travel-16732.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:372618709453:android:6fe773c8096c8120b5dc84",
+        "android_client_info": {
+          "package_name": "com.deyforyou.travel"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "372618709453-nblemvndhfo215ifr7is0l91t3rbocf4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.deyforyou.travel",
+            "certificate_hash": "18677a00e1f74dfaba6e2a3d5bab7b6a3d4baf81"
+          }
+        },
+        {
+          "client_id": "372618709453-b5hgvc0vq8m7obajcn6b66vhb8mo3e5s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD-o523hcuAqDzqX0WFyWSakEKppfb4qYI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "372618709453-b5hgvc0vq8m7obajcn6b66vhb8mo3e5s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
